@@ -1,0 +1,25 @@
+<div class="container">
+  <mat-card>
+    <mat-card-title>Validation de votre email</mat-card-title>
+    <mat-card-content>
+       <h2>Un code de validation a été envoyé par mail vous avez quelques minutes pour valider votre compte </h2>
+      <form [formGroup]="validationForm">
+
+        <mat-form-field appearance="outline">
+          <mat-label>Code de validation </mat-label>
+          <input matInput formControlName="code" placeholder="code" required >
+
+          <mat-error *ngIf="validationForm.get('code').invalid && validationForm.get('code').touched">
+            Entrer votre code valide s'il vous plait.
+          </mat-error>
+        </mat-form-field>
+
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="validationForm.invalid" (click)="onSubmit()">
+          Activé
+        </button>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
