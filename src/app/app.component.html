@@ -1,5 +1,6 @@
 
-<div  *ngIf="!isCustomerLoggedIn && !isAdminLoggedIn">
+<div  *ngIf="!isCustomerLoggedIn">
+  <!--<div  *ngIf="!isCustomerLoggedIn && !isAdminLoggedIn"> -->
  <mat-toolbar color="primary" class="navbar">
    <span class="navbar-brand">Jeux Olympique Paris 2024 </span>
    <span class="spacer"> </span>
@@ -11,7 +12,7 @@
 <!--
 <div  *ngIf="isAdminLoggedIn">
   <mat-toolbar color="primary" class="navbar">
-    <span class="navbar-brand">E-Commerce</span>
+    <span class="navbar-brand">Jeux Olympique Paris 2024 </span>
     <span class="spacer"> </span>
     <button mat-button routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</button>
     <button mat-button routerLink="/admin/analytics" routerLinkActive="active">Analytics</button>
@@ -25,10 +26,11 @@
 </div>
 -->
 
+
 <div  *ngIf="isCustomerLoggedIn">
 
   <mat-toolbar color="primary" class="navbar">
-    <span class="navbar-brand">E-Commerce</span>
+    <span class="navbar-brand">Jeux Olympique Paris 2024 </span>
     <span class="spacer"> </span>
     <button mat-button routerLink="/customer/dashboard" routerLinkActive="active">Dashboard</button>
     <button mat-button routerLink="/customer/cart" routerLinkActive="active">Cart</button>
