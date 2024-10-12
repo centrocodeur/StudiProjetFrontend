@@ -8,11 +8,11 @@ import {Router} from "@angular/router";
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit{
-  title = 'ECommerceWeb';
+  title = 'FrontendAPP';
 
   isCustomerLoggedIn: boolean = UserStorageService.isCustomerLoggedIn();
 
-  isAdminLoggedIn: boolean = UserStorageService.isAdminLoggedIn();
+ // isAdminLoggedIn: boolean = UserStorageService.isAdminLoggedIn();
 
   constructor(private router: Router) {
   }
@@ -20,7 +20,7 @@ export class AppComponent implements OnInit{
   ngOnInit():void{
     this.router.events.subscribe(event=>{
       this.isCustomerLoggedIn =UserStorageService.isCustomerLoggedIn();
-      this.isAdminLoggedIn= UserStorageService.isAdminLoggedIn();
+     // this.isAdminLoggedIn= UserStorageService.isAdminLoggedIn();
     })
 
   }
