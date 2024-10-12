@@ -3,7 +3,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {CustomerService} from "../services/customer.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import * as net from "net";
+//import * as net from "net";
 import {UserStorageService} from "../../services/storage/user-storage.service";
 
 @Component({
