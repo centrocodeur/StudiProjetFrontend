@@ -9,9 +9,12 @@ import {DemoAngularMaterialModule} from "./DemoAngularMaterialModule";
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientModule, provideHttpClient} from "@angular/common/http";
 import { TrackOrderComponent } from './track-order/track-order.component';
 import { ValidationComponent } from './validation/validation.component';
+import {provideRouter} from "@angular/router";
+import {provideHttpClientTesting} from "@angular/common/http/testing";
+
 
 @NgModule({
   declarations: [
@@ -30,10 +33,13 @@ import { ValidationComponent } from './validation/validation.component';
         FormsModule,
         HttpClientModule
 
+
     ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+
+
   ],
   bootstrap: [AppComponent]
 })
